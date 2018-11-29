@@ -19,7 +19,7 @@ https://en.wikipedia.org/wiki/STL_(file_format)
 
 class Cube {
 private:
-    double dimension, xval, yval, zval;
+    double dimension;
 
 public:
     Cube(double d) : dimension(d){
@@ -36,7 +36,17 @@ public:
     }
 
     void write(const string& name){
-
+        ofstream myf (name);
+        if (myf.fail())
+        {
+            cerr << "Error opening file" << endl;
+            exit(1);
+        }
+        else
+        {
+            myf << "Solid cube" << endl;
+            myf << "facet normal";
+        }
     }
 };
 
@@ -47,7 +57,7 @@ public:
     Cylinder(double radius, double height) : radius(radius), height(height){
     }
 
-    
+
 };
 
 class Design {
@@ -71,7 +81,7 @@ int main() {
     Design d;
     double s = 10;
     Cube c(s);
-    //c.translate(x,y,z);
+    c.translate(x,y,z);
     // rotate??
     cout << c.volume() << '\n';
     c.write("out.stl"); // how to get all my shapes into the same file
