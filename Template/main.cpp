@@ -5,11 +5,46 @@
 */
 
 #include <iostream>
+#include "Vec3d.h"
 using namespace std;
 
 template<typename T>
+
 void sort(T x[], int n) {
-    
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - 1; j++)
+        {
+            if (x[j] > x[j + 1])
+            {
+                T temp = x[j];
+                x[j] = x[j + 1];
+                x[j + 1] = temp;
+            }
+        }
+    }
+}
+
+template<typename T>
+
+T sum(T x[], int n)
+{
+    T total = 0;
+    for (int i = 0; i < n; i++)
+    {
+        total += x[i];
+    }
+    return total;
+}
+
+template<typename T>
+
+void print(T x[], int n) {
+    for (int i = 0; i < n; i++)
+    {
+        cout << x[i] << " ";
+    }
+    cout << '\n';
 }
 
 int main() {
@@ -27,5 +62,4 @@ int main() {
     string c[] = {"yo", "ho", "test", "foo", "bar"};
     sort(c, sizeof(c)/sizeof(string));
     print(c, sizeof(c)/sizeof(string));
-    //TODO?	cout << sum(c, sizeof(c)/sizeof(string)) << '\n';
-}
+    }
