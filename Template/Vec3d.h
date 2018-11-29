@@ -1,6 +1,8 @@
-//
-// Created by Joey Kuhn on 11/29/18.
-//
+/*
+    HW - Vec3d Header
+    Authors: Joseph Kuhn & John Brescia
+    We pledge our honor that we have abided by the Stevens Honor System.
+*/
 
 #pragma once
 #include <iostream>
