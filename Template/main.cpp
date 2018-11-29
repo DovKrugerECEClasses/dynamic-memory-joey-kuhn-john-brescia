@@ -5,6 +5,12 @@
 */
 
 #include <iostream>
+using namespace std;
+
+template<typename T>
+void sort(T x[], int n) {
+    
+}
 
 int main() {
     int a[] = {5, 4, 3, 1, 7, 8, 9, 2, 1};

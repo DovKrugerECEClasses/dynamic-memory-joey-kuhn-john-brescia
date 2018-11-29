@@ -1,0 +1,3 @@
+/Users/Kuhn/Desktop/Programming/Template/dynamic-memory-joey-kuhn-john-brescia/Template/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Kuhn/Desktop/Programming/Template/dynamic-memory-joey-kuhn-john-brescia/Template/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Kuhn/Desktop/Programming/Template/dynamic-memory-joey-kuhn-john-brescia/Template/cmake-build-debug/CMakeFiles/Template.dir

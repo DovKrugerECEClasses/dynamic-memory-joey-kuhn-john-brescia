@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Kuhn/Desktop/Programming/Template/dynamic-memory-joey-kuhn-john-brescia/Template
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/Kuhn/Desktop/Programming/Template/dynamic-memory-joey-kuhn-john-brescia/Template/cmake-build-debug
