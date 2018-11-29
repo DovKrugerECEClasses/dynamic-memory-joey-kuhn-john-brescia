@@ -22,14 +22,13 @@ private:
     double dimension, xval, yval, zval;
 
 public:
-    Cube(double d = 0, double xval = 0, double yval = 0, zval = 0) : dimension(d), xval(x), yval(y), zval(z)
-    {
+    Cube(double d) : dimension(d), xval(0), yval(0), zval(0) {
     }
 
     void translate(double x, double y, double z) {
-        dimension += x;
-        dimension += y;
-        dimension += z;
+        xval += x;
+        yval += y;
+        zval += z;
     }
 
     double volume(){
@@ -47,8 +46,8 @@ public:
         {
             myf << "Solid cube" << endl;
             myf << "facet normal -0 0 1\n outer loop\n vertex " << xval+0 << " " << yval+dimension
-                    << " " << zval+dimension << "\n vertex " << xval+dimension << " " << yval+0 << " " << zval+dimension << "\n vertex "
-                    << xval+dimension << " " << yval+dimension << " " << zval+dimension << "\n endloop\n endfacet\n";
+            << " " << zval+dimension << "\n vertex " << xval+dimension << " " << yval+0 << " " << zval+dimension << "\n vertex "
+            << xval+dimension << " " << yval+dimension << " " << zval+dimension << "\n endloop\n endfacet\n";
         }
     }
 };
