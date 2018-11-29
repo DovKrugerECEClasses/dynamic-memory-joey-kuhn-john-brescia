@@ -19,10 +19,11 @@ https://en.wikipedia.org/wiki/STL_(file_format)
 
 class Cube {
 private:
-    double dimension;
+    double dimension, xval, yval, zval;
 
 public:
-    Cube(double d) : dimension(d){
+    Cube(double d = 0, double xval = 0, double yval = 0, zval = 0) : dimension(d), xval(x), yval(y), zval(z)
+    {
     }
 
     void translate(double x, double y, double z) {
@@ -45,7 +46,9 @@ public:
         else
         {
             myf << "Solid cube" << endl;
-            myf << "facet normal";
+            myf << "facet normal -0 0 1\n outer loop\n vertex " << xval+0 << " " << yval+dimension
+                    << " " << zval+dimension << "\n vertex " << xval+dimension << " " << yval+0 << " " << zval+dimension << "\n vertex "
+                    << xval+dimension << " " << yval+dimension << " " << zval+dimension << "\n endloop\n endfacet\n";
         }
     }
 };
